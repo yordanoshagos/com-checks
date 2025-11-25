@@ -1,0 +1,20 @@
+{
+  "crons": [
+    {
+      "path": "/api/health",
+      "schedule": "0 5 * * *"
+    },
+    {
+      "path": "/api/jobs/invitation-reminder",
+      "schedule": "0 8 * * *"
+    }
+  ],
+  "functions": {
+    "src/app/api/**/*": {
+      "maxDuration": 300
+    },
+    "src/app/api/subject/**/*": {
+      "maxDuration": 300
+    }
+  }
+}
